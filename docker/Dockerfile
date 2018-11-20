@@ -66,6 +66,7 @@ RUN pip --no-cache-dir install \
         sklearn \
 	pandas \
 	h5py \
+	shapely \
         && \
     python -m ipykernel.kernelspec
 
