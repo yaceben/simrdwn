@@ -26,7 +26,8 @@ All commands should be run in the docker file, create it via the following comma
 	cd /simrdwn/docker
 	nvidia-docker build --no-cache -t simrdwn .
 	nvidia-docker run -it -v /raid:/raid --name simrdwn_train_gpu0 simrdwn
-	
+	# for those not familiar with docker, the first /raid should (maybe) be replaced with either your root or the root of where your data as well as the docker container resides, e.g.: /home/user/
+	# it's probably a good idea too to ln -s ...path_to_simrdwn /raid/local to avoid bugs during certain script evocations
 
 Compile the Darknet C program
 
