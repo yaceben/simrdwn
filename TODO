@@ -1,0 +1,3 @@
+- make sure that shapely is properly installed
+- fix bugs in parse_cowc.py wtr to cowc dataset
+- hunt for more bugs as I go
