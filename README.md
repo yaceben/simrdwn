@@ -13,7 +13,10 @@ The Satellite Imagery Multiscale Rapid Detection with Windowed Networks (SIMRDWN
 
 3. The original [YOLT repository](https://github.com/CosmiQ/yolt) (now deprecated)
  
-
+____
+## Goal of this fork
+[TLDR] make simrdwn ready to go. 
+I could not get it running out of the box so I thought I'd try to fix that and make it available for all. For now I'll concentrate on my use case, which is to get it to run with the cowc dataset and yolov2.
 ____
 ## Running SIMRDWN
 
@@ -21,7 +24,7 @@ ____
 
 ### 0. Create Docker file
 
-All commands should be run in the docker file, create it via the following commands
+All commands should be run in the docker file, create it via the following commands. Note that nvidia-docker will fail to build the docker file (and probably any other docker file) if you are running under kernel 4.19.x. There are workarounds but they might cause unexpected behaviours. Your best bet is to try kernel <4.19 or maybe it'll be resolved in 4.20 (with its known impact on intel cpus due to spectre/meltdown mitigations)
 
 	cd /simrdwn/docker
 	nvidia-docker build --no-cache -t simrdwn .
